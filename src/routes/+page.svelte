@@ -1,29 +1,43 @@
 <script>
 // Až vytvoříš komponent, nezapomeň jej importovat
 // Emoji se vytváří pomocí windows + . nebo je můžeš zkopírovat odsud 🙂 😢
+let score =$state(0)
+let isHappy = $state(false)
+let password = $state("🙂")
+let emoji = $state("🙂")
+
+function pricteni(){
+    score+= 1
+}
+function zmena_emoji(){
+    if(pasword==="heslo"){
+        isHappy = true
+    }
+}
+
 </script>
 
-<div class="headings">
-    <!-- Sem patří komponenty s nadpisy -->
-</div>
+<div class="headings"></div>
+<h3>git ad</h3>
+
 
 <div class="container">
-    <p>Zde se bude zobrazovat počet kliknutí</p> 
+    <p>Zde se bude zobrazovat počet kliknutí:{score}</p> 
     <div class="buttons">
-        <!-- Sem patří tlačítka -->
+        <button onclick={pricteni}>zmackni na pricteni</button>
+        <button onclick={zmena_emoji}>zmackni na zmenu emoji {emoji}</button>
+
+        <input bind:value ={password}>
     </div>
 </div>
-
-
-
-
-
-
+{isHappy}?="🙂":"😢"
 
 
 <style>
-
-    /* CSS není potřeba upravovat */
+p{
+    border: 1px solid black;
+    color: black;
+}
 
 * {
     font-family: monospace;
