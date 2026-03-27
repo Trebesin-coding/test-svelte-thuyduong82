@@ -4,7 +4,7 @@
 let score =$state(0)
 let isHappy = $state(false)
 let password = $state("🙂")
-let emoji = $state("🙂")
+let click = $state(0)
 
 function pricteni(){
     score+= 1
@@ -14,11 +14,16 @@ function zmena_emoji(){
         isHappy = true
     }
 }
-
+function handle(){
+    if(count===3){
+        text="svelte"
+        count = 0
+    }
+}
 </script>
 
 <div class="headings"></div>
-<h3>git ad</h3>
+<h3 onclick={handle}></h3>
 
 
 <div class="container">
