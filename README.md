@@ -31,4 +31,11 @@ CSS není potřeba upravovat
 
 Nápověda pro syntax props: `let { ukazka } = $props()`
 
-### Počet bodu: ?/100
+### Počet bodu: 51/100
+
+- password s 1 s
+- ount a text které nejsou deklarované, zmena_emoji také ne
+- proč je tam input? 
+- u zkrácené podmínky nemá být =
+- chybí component
+- proč je emoji mimo elementy?
